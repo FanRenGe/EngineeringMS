@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
 <!--
 body {
-	background-color: #009900;
+	background-color: #51bde6;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
@@ -55,7 +55,7 @@ a:active {
             <tr>
               <td bgcolor="A3E4FF" ><table width="170" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#009900" class="style2"> ● 进度管理
+                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#0080CE" class="style2"> ● 进度管理
                     
                     
                     ● </td>
@@ -91,7 +91,7 @@ a:active {
               <td bgcolor="A3E4FF" ><table width="170" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
 			  
                 <tr>
-                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#009900" class="style2"> ● 合同管理
+                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#0080CE" class="style2"> ● 合同管理
                     
                     
                     ● </td>
@@ -122,7 +122,7 @@ a:active {
 			 <tr>
               <td bgcolor="A3E4FF" ><table width="170" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#009900" class="style2"> ● 费用管理
+                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#0080CE" class="style2"> ● 费用管理
                     
                     
                     ● </td>
@@ -147,7 +147,7 @@ a:active {
                   <tr>
               <td bgcolor="A3E4FF" ><table width="170" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#009900" class="style2"> ● 系统设置
+                  <td align="center" valign="middle" background="back_035.gif" bgcolor="#0080CE" class="style2"> ● 系统设置
                     
                     
                     ● </td>

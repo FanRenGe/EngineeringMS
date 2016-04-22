@@ -17,14 +17,14 @@ public partial class admin_zl : System.Web.UI.Page
                   </Script>";
     protected void Page_Load(object sender, EventArgs e)
     {
-         
-        
-            if (!IsPostBack)
-            {
-                Button1.Attributes.Add("onclick", "return confirm('你真的要执行删除吗？');");
-                bind();
-            }
-        
+
+
+        if (!IsPostBack)
+        {
+            Button1.Attributes.Add("onclick", "return confirm('你真的要执行删除吗？');");
+            bind();
+        }
+
     }
     private void bind()
     {
@@ -55,6 +55,14 @@ public partial class admin_zl : System.Web.UI.Page
     protected void DataGrid1_ItemCommand(object source, DataGridCommandEventArgs e)
     {
         if (e.CommandName == "Select")
+        {
+            Response.Redirect("editzl.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Detail")
+        {
+            Response.Redirect("zldetail.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Delete")
         {
             Response.Redirect("editzl.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
         }
@@ -97,14 +105,25 @@ public partial class admin_zl : System.Web.UI.Page
             }
         }
     }
-   
-   protected void Button1_Click(object sender, EventArgs e)
+
+    protected void Button1_Click(object sender, EventArgs e)
     {
         del();
     }
 
-    protected void LinkButton1_Click(object sender, EventArgs e)
+    //protected void LinkButton1_Click(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("editzl.aspx");
+    //}
+
+    protected void Button2_OnClick(object sender, EventArgs e)
     {
         Response.Redirect("editzl.aspx");
+    }
+
+    protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        e.Item.Cells[10].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');"); 
+        
     }
 }

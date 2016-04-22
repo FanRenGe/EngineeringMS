@@ -16,7 +16,7 @@
 
                 <tr height="30">
                     <td width="3%" background="../Images/topbg.jpg" align="left" style="height: 30px">
-                        <img height="16" src="../Images/icon/right.GIF"><b>列表</b>					</td>
+                        <img height="16" src="../Images/leader_12.jpg"><b>员工信息列表</b>					</td>
 
                 </tr>
                 <tr>
@@ -26,7 +26,7 @@
 
                 <tr>
                     <td>
-                        <asp:GridView ID="GridView1" runat="server" Height="71px" Width="798px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" DataKeyNames="Employeeid" OnRowDataBound="GridView1_RowDataBound1" OnRowDeleting="GridView1_RowDeleting1" OnRowEditing="GridView1_RowEditing" EnableModelValidation="True">
+                        <asp:GridView ID="GridView1" runat="server" Height="71px" Width="798px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" DataKeyNames="Employeeid" OnRowDataBound="GridView1_RowDataBound1" OnRowDeleting="GridView1_RowDeleting1" OnRowEditing="GridView1_RowEditing"  EnableModelValidation="True">
                             <FooterStyle BackColor="White" ForeColor="#000066" />
                             <RowStyle ForeColor="#000066" />
                             <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
@@ -37,8 +37,7 @@
 
                                 <asp:BoundField DataField="hao" HeaderText="员工工号" />
                                 <asp:BoundField DataField="zu" HeaderText="所属小组" />
-
-                                <asp:CommandField EditText="查看" HeaderText="查看" SelectText="查看" ShowSelectButton="True" Visible="false" />
+                                <asp:HyperLinkField HeaderText="查看" DataNavigateUrlFormatString="ygdetail.aspx?Employeeid={0}" DataNavigateUrlFields="Employeeid" Text="查看"/>
                                 <asp:CommandField EditText="修改" HeaderText="修改" ShowEditButton="True" />
                                 <asp:CommandField HeaderText="删除" ShowDeleteButton="True" />
                             </Columns>

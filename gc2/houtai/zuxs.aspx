@@ -16,7 +16,7 @@
 
                 <tr height="30">
                     <td width="3%" background="../Images/topbg.jpg" align="left" style="height: 30px">
-                        <img height="16" src="../Images/icon/right.GIF"><b>列表</b>					</td>
+                         <img height="16" src="../Images/leader_12.jpg"><b>小组信息列表</b>					</td>
 
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                                 <asp:BoundField DataField="ming" HeaderText="小组名称" />
                                 <asp:BoundField DataField="zuzhang" HeaderText="小组组长" />
 
-                                <asp:CommandField EditText="查看" HeaderText="查看" SelectText="查看" ShowSelectButton="True" Visible="false" />
+                                <asp:HyperLinkField HeaderText="查看" DataNavigateUrlFormatString="zudetail.aspx?id={0}" DataNavigateUrlFields="id" Text="查看"/>
                                 <asp:CommandField EditText="修改" HeaderText="修改" ShowEditButton="True" />
                                 <asp:CommandField HeaderText="删除" ShowDeleteButton="True" />
                             </Columns>
