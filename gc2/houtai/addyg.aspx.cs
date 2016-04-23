@@ -31,10 +31,12 @@ public partial class Info_addyg : System.Web.UI.Page
             if (Request["Employeeid"] != null)
             {
 
+                RequiredFieldValidator2.Enabled = false;
+                RequiredFieldValidator4.Enabled = false;
                 this.Button1.Visible = false;
                 this.Button3.Visible = true;
 
-                this.Label2.Text = "修改信息";
+                this.Label2.Text = "修改员工信息";
                 int Employeeid = Convert.ToInt32(Request["Employeeid"].ToString());
                 SqlConnection con1 = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
                 con1.Open();
@@ -48,7 +50,7 @@ public partial class Info_addyg : System.Web.UI.Page
                     dh.Text = dr1["dh"].ToString();
                     hao.Text = dr1["hao"].ToString();
 
-                    TextBox1.Text = dr1["password"].ToString();
+                    //password.Text = dr1["password"].ToString();
 
 
 
@@ -67,7 +69,7 @@ public partial class Info_addyg : System.Web.UI.Page
                 this.MyPanel.Visible = true;
                 this.Button1.Visible = true;
                 this.Button3.Visible = false;
-                this.Label2.Text = "添加";
+                this.Label2.Text = "添加员工信息";
 
             }
 
@@ -83,6 +85,10 @@ public partial class Info_addyg : System.Web.UI.Page
         if (username.Text.Trim() == "")
         {
             Response.Write("<script>alert('姓名必须填写')</script>");
+        }
+        else if (password.Text.Trim() != password2.Text.Trim())
+        {
+            Response.Write("<script>alert('两次输入密码不一致')</script>");
         }
         else
         {
@@ -103,8 +109,8 @@ public partial class Info_addyg : System.Web.UI.Page
             int id = Convert.ToInt32(zu.SelectedItem.Value.ToString());
             string zu1 = zu.SelectedItem.Text;
 
-            string password = TextBox1.Text.Trim();
-            string sql = "insert into yg([username],[password],[qq],[dh],[hao],[xingbie],[jibie],lei,[id],[zu]) values('" + username.Text.Trim() + "','" + password + "','" + qqs + "','" + dh.Text.Trim() + "','" + hao.Text.Trim() + "','" + xingbie1 + "','" + jibie1 + "','员工','" + id + "','" + zu1 + "')";
+            string pwd = password.Text.Trim();
+            string sql = "insert into yg([username],[password],[qq],[dh],[hao],[xingbie],[jibie],lei,[id],[zu]) values('" + username.Text.Trim() + "','" + pwd + "','" + qqs + "','" + dh.Text.Trim() + "','" + hao.Text.Trim() + "','" + xingbie1 + "','" + jibie1 + "','员工','" + id + "','" + zu1 + "')";
             SqlCommand com = new SqlCommand(sql, con);
             com.ExecuteNonQuery();
 
@@ -123,19 +129,32 @@ public partial class Info_addyg : System.Web.UI.Page
     protected void Button3_Click(object sender, EventArgs e)
     {
 
+        if (username.Text.Trim() == "")
+        {
+            Response.Write("<script>alert('姓名必须填写')</script>");
+        }
+        else if (password.Text.Trim() != "" && password.Text.Trim() != password2.Text.Trim())
+        {
+            Response.Write("<script>alert('两次输入密码不一致')</script>");
+        }
+        else
+        {
 
 
+            int id = Convert.ToInt32(zu.SelectedItem.Value.ToString());
+            string zu1 = zu.SelectedItem.Text;
 
-        int id = Convert.ToInt32(zu.SelectedItem.Value.ToString());
-        string zu1 = zu.SelectedItem.Text;
-
-        SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
-        con.Open();
-        int Employeeid = Convert.ToInt32(Request["Employeeid"].ToString());
-        string sql = "update yg set qq='" + qq.Text.Trim() + "' ,username='" + username.Text.Trim() + "' , password='" + TextBox1.Text.Trim() + "' ,dh='" + dh.Text.Trim() + "',xingbie='" + xingbie.Text.Trim() + "',jibie='" + jibie.Text.Trim() + "',hao='" + hao.Text.Trim() + "'  ,id='" + id + "',zu='" + zu1 + "'where Employeeid=" + Employeeid + " ";
-        SqlCommand com = new SqlCommand(sql, con);
-        com.ExecuteNonQuery();
-        Response.Write("<script>alert('修改成功!');window.location.href='yg.aspx';</script>");
-        con.Close();
+            SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
+            con.Open();
+            int Employeeid = Convert.ToInt32(Request["Employeeid"].ToString());
+            string sql = "update yg set qq='" + qq.Text.Trim() + "' ,username='" + username.Text.Trim() +
+                         "' , password='" + password.Text.Trim() + "' ,dh='" + dh.Text.Trim() + "',xingbie='" +
+                         xingbie.Text.Trim() + "',jibie='" + jibie.Text.Trim() + "',hao='" + hao.Text.Trim() +
+                         "'  ,id='" + id + "',zu='" + zu1 + "'where Employeeid=" + Employeeid + " ";
+            SqlCommand com = new SqlCommand(sql, con);
+            com.ExecuteNonQuery();
+            Response.Write("<script>alert('修改成功!');window.location.href='yg.aspx';</script>");
+            con.Close();
+        }
     }
 }

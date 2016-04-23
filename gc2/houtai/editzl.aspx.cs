@@ -36,7 +36,7 @@ public partial class admin_editzl : System.Web.UI.Page
             this.CompanyId1.DataBind();
             if (Request.QueryString["id"] != null)
             {
-                Button2.Text = "修改";
+                Button2.Text = "修改项目资料";
                 bind();
 
             }

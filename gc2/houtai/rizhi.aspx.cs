@@ -58,7 +58,21 @@ public partial class admin_rizhi : System.Web.UI.Page
         {
             Response.Redirect("editrizhi.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
         }
+        if (e.CommandName == "Detail")
+        {
+            Response.Redirect("rizhidetail.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Delete")
+        {
+            Response.Redirect("editrizhi.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
     }
+    protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        e.Item.Cells[4].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
+
+    }
+
     private void del()
     {
         SqlCommand com = new SqlCommand();
@@ -103,7 +117,7 @@ public partial class admin_rizhi : System.Web.UI.Page
         del();
     }
 
-    protected void LinkButton1_Click(object sender, EventArgs e)
+   protected void Button2_OnClick(object sender, EventArgs e)
     {
         Response.Redirect("editrizhi.aspx");
     }

@@ -64,7 +64,16 @@ public partial class admin_zl : System.Web.UI.Page
         }
         if (e.CommandName == "Delete")
         {
-            Response.Redirect("editzl.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+            int id = Convert.ToInt32(DataGrid1.DataKeys[e.Item.ItemIndex]);
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
+            con.Open();
+            string sql = "delete from zl where id=" + id;
+            SqlCommand com = new SqlCommand(sql, con);
+            com.ExecuteNonQuery();
+            Response.Write("<script>alert('删除成功！')</script>");
+            bind();
+            con.Close();
         }
     }
     private void del()
@@ -123,7 +132,7 @@ public partial class admin_zl : System.Web.UI.Page
 
     protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
     {
-        e.Item.Cells[10].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');"); 
-        
+        e.Item.Cells[10].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
+
     }
 }

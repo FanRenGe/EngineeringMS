@@ -7,26 +7,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>无标题页</title>
-    <link href="../css.css" type="text/css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
 
 </head>
 <body>
     <form id="form1" runat="server">
 
-        <div style="font-size: 9pt">
+        <div>
             <table border="0" cellpadding="0" cellspacing="0" bordercolor="#111111" width="100%">
 
                 <tr height="30">
 
-                    <td background="../Images/topbg.jpg" width="80" style="height: 30px"><b>
-                        <asp:Label ID="Label2" runat="server" Text="添加"></asp:Label></b></td>
+                    <td background="../Images/topbg.jpg" width="100%" style="height: 30px">
+                        <img height="16" src="../Images/leader_12.jpg"><b>
+                            <asp:Label ID="Label2" runat="server" Text="添加员工"></asp:Label></b></td>
                     <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
                 </tr>
             </table>
-            <table align="center" style="width: 560px; height: 513px">
+            <table align="left" style="width: 560px; height: 513px">
 
-                <asp:Panel ID="MyPanel" runat="server" Visible="true">
-
+                
+                <asp:Panel ID="MyPanel" runat="server" Visible="True">
 
 
                     <tr>
@@ -35,10 +36,17 @@
                             <asp:TextBox ID="username" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username"
                                 ErrorMessage="必填"></asp:RequiredFieldValidator></td>
                     </tr>
+
                     <tr>
                         <td>员工密码：</td>
                         <td style="width: 100px">
-                            <asp:TextBox ID="TextBox1" runat="server" TextMode="Password"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1"
+                            <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="password"
+                                ErrorMessage="必填"></asp:RequiredFieldValidator></td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td style="width: 100px">
+                            <asp:TextBox ID="password2" runat="server" TextMode="Password"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="password2"
                                 ErrorMessage="必填"></asp:RequiredFieldValidator></td>
                     </tr>
                 </asp:Panel>

@@ -15,8 +15,9 @@
 
                 <tr height="30">
 
-                    <td background="../Images/topbg.jpg" width="80" style="height: 30px"><b>
-                        <asp:Label ID="Label2" runat="server" Text="查看"></asp:Label></b></td>
+                    <td background="../Images/topbg.jpg" width="80" style="height: 30px">
+                        <img height="16" src="../Images/leader_12.jpg"><b>
+                            <asp:Label ID="Label2" runat="server" Text="查看"></asp:Label></b></td>
                     <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
                 </tr>
             </table>

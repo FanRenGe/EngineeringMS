@@ -17,14 +17,14 @@ public partial class admin_jindu : System.Web.UI.Page
                   </Script>";
     protected void Page_Load(object sender, EventArgs e)
     {
-         
-        
-            if (!IsPostBack)
-            {
-                Button1.Attributes.Add("onclick", "return confirm('你真的要执行删除吗？');");
-                bind();
-            }
-        
+
+
+        if (!IsPostBack)
+        {
+            Button1.Attributes.Add("onclick", "return confirm('你真的要执行删除吗？');");
+            bind();
+        }
+
     }
     private void bind()
     {
@@ -57,6 +57,24 @@ public partial class admin_jindu : System.Web.UI.Page
         if (e.CommandName == "Select")
         {
             Response.Redirect("editjindu.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Detail")
+        {
+            Response.Redirect("jindudetail.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Delete")
+        {
+
+            int id = Convert.ToInt32(DataGrid1.DataKeys[e.Item.ItemIndex]);
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
+            con.Open();
+            string sql = "delete from jindu where id=" + id;
+            SqlCommand com = new SqlCommand(sql, con);
+            com.ExecuteNonQuery();
+            Response.Write("<script>alert('删除成功！')</script>");
+            bind();
+            con.Close();
         }
     }
     private void del()
@@ -97,14 +115,19 @@ public partial class admin_jindu : System.Web.UI.Page
             }
         }
     }
-   
-   protected void Button1_Click(object sender, EventArgs e)
+
+    protected void Button1_Click(object sender, EventArgs e)
     {
         del();
     }
 
-    protected void LinkButton1_Click(object sender, EventArgs e)
+    protected void Button2_OnClick(object sender, EventArgs e)
     {
         Response.Redirect("editjindu.aspx");
+    }
+    protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        e.Item.Cells[6].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
+
     }
 }

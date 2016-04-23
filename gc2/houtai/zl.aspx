@@ -13,22 +13,16 @@
     <form id="form1" runat="server">
         <div>
             <table width="100%" height="25" border="0" cellpadding="0" cellspacing="0">
-                 <tr height="30">
+                <tr height="30">
                     <td width="3%" background="../Images/topbg.jpg" align="left" style="height: 30px">
-                         <img height="16" src="../Images/leader_12.jpg"><b>项目资料</b>					</td>
+                        <img height="16" src="../Images/leader_12.jpg"><b>项目资料</b>					</td>
 
                 </tr>
             </table>
-           <%-- <table width="200" height="3" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td height="3"></td>
-                </tr>
-            </table>--%>
-            <asp:Button ID="Button2" runat="server" Text="添加" OnClick="Button2_OnClick" />
-            <%--<asp:LinkButton ID="LinkButton1" runat="server" BackColor="#FFFF33" Font-Bold="True"
-                Font-Italic="False" Font-Names="宋体" Font-Size="14pt" Font-Underline="False" ForeColor="Navy"
-                OnClick="LinkButton1_Click">添加</asp:LinkButton><a href="editweihu.aspx"><strong><span style="color: #ff0066"></span></strong></a>--%>
             <br />
+            <asp:Button ID="Button2" runat="server" Text="添加" OnClick="Button2_OnClick" />
+
+
             <br />
             <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                 DataKeyField="ID" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged" OnItemDataBound="DataGrid1_OnItemDataBound"
@@ -36,7 +30,7 @@
                 <PagerStyle HorizontalAlign="Left" Mode="NumericPages" VerticalAlign="Middle" BackColor="White" ForeColor="#000066" PageButtonCount="20" />
                 <ItemStyle Font-Size="Small" ForeColor="#000066" />
                 <Columns>
-                     <asp:TemplateColumn>
+                    <asp:TemplateColumn>
                         <ItemTemplate>
                             <asp:CheckBox ID="CheckBox1" runat="server" />
                         </ItemTemplate>
@@ -53,7 +47,7 @@
                                 Text='<%# Eval("branch") %>'></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateColumn>
-                    <asp:BoundColumn HeaderText="项目负责人" DataField="zuzhang"/>
+                    <asp:BoundColumn HeaderText="项目负责人" DataField="zuzhang" />
                     <asp:TemplateColumn HeaderText="项目预算资金">
                         <ItemTemplate>
                             <asp:HyperLink ID="HyperLink4" runat="server" Font-Underline="False" Target="_blank"
@@ -81,7 +75,7 @@
                     </asp:TemplateColumn>
                     <asp:ButtonColumn CommandName="Detail" Text="查看" HeaderText="查看"></asp:ButtonColumn>
                     <asp:ButtonColumn CommandName="Select" Text="编辑" HeaderText="编辑"></asp:ButtonColumn>
-                   <asp:ButtonColumn CommandName="Delete" Text="删除" HeaderText="删除" ></asp:ButtonColumn>
+                    <asp:ButtonColumn CommandName="Delete" Text="删除" HeaderText="删除"></asp:ButtonColumn>
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />

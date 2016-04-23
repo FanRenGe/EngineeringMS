@@ -45,6 +45,7 @@ public partial class admin_edithetong : System.Web.UI.Page
 
             if (Request.QueryString["id"] != null)
             {
+                Label2.Text = "修改合同信息";
                 Button2.Text = "修改";
                 bind();
 

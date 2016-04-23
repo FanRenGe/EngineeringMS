@@ -58,6 +58,19 @@ public partial class admin_hetong : System.Web.UI.Page
         {
             Response.Redirect("edithetong.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
         }
+        if (e.CommandName == "Detail")
+        {
+            Response.Redirect("hetongdetail.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+        if (e.CommandName == "Delete")
+        {
+            Response.Redirect("edithetong.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+        }
+    }
+    protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        e.Item.Cells[10].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
+
     }
     private void del()
     {

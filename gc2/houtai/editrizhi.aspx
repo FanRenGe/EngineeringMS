@@ -1,40 +1,41 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="editrizhi.aspx.cs"  validateRequest=false  Inherits="admin_editrizhi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="editrizhi.aspx.cs" ValidateRequest="false" Inherits="admin_editrizhi" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>无标题页</title>
-	<link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
+    <link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
 </head>
 
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
     <div>
-        <br />
         <span style="font-size: 14px">项目日志<br />
         </span>
-        <br />
         <table style="width: 564px; height: 572px;" border="0">
             <tr>
                 <td style="width: 85px">项目资料名：</td>
                 <td style="width: 155px">
-                    <asp:DropDownList ID="CompanyId1" runat="server" >                    </asp:DropDownList></td>
+                    <asp:dropdownlist id="CompanyId1" runat="server">                    </asp:dropdownlist>
+                </td>
             </tr>
-			
+
             <tr>
                 <td style="width: 85px">项目日志：</td>
                 <td style="width: 155px">
-                    <asp:TextBox ID="rizhi" runat="server"  TextMode="MultiLine" Height="300px" Width="325px"></asp:TextBox></td>
+                    <asp:textbox id="rizhi" runat="server" textmode="MultiLine" height="300px" width="325px"></asp:textbox>
+                </td>
             </tr>
-			
+
             <tr>
-                <td style="width: 85px">                </td>
+                <td style="width: 85px"></td>
                 <td style="width: 155px">
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="添加" />
-                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="返回" /></td>
+                    <asp:button id="Button2" runat="server" onclick="Button2_Click" text="添加" />
+                    <asp:button id="Button3" runat="server" onclick="Button3_Click" text="返回" />
+                </td>
             </tr>
         </table>
     </div>
-    </form>
+</form>
 </body>
 </html>
