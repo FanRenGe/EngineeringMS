@@ -8,69 +8,71 @@
 <head id="Head1" runat="server">
     <title>无标题页</title>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-    <link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
+    <link href="../css/css.css" rel="stylesheet" />
 </head>
-<body background='Images/背景2.jpg'>
+<body>
 
 
 
 
     <form id="form1" runat="server">
-        <tabel>
-  <tr>
-                <td >
-                   员工姓名：</td>
+        <table width="100%" height="25" border="0" cellpadding="0" cellspacing="0">
+            <tr height="30">
+                <td width="3%" background="../Images/topbg.jpg" align="left" style="height: 30px">
+                    <img height="16" src="../Images/leader_12.jpg"><b>报销申请查询</b>					</td>
+
+            </tr>
+        </table>
+
+
+        <br />
+        <table>
+            <tr>
+                <td>员工姓名：</td>
                 <td>
-                    <asp:TextBox ID="Username" runat="server" Width="116px"></asp:TextBox></td>
-						 </tr>
-						
-						  <tr>
-                <td >
-                    预算：</td>
+                    <asp:TextBox ID="Username" runat="server" Width="116px"></asp:TextBox>
+
+                </td>
+            </tr>
+            <tr>
+                <td>预算：</td>
                 <td>
                     <asp:TextBox ID="yusuan" runat="server" Width="116px"></asp:TextBox></td>
-						 </tr>
-						 
-						   <tr>
-                <td >
-                    费用：</td>
+            </tr>
+
+            <tr>
+                <td>费用：</td>
                 <td>
                     <asp:TextBox ID="fei" runat="server" Width="116px"></asp:TextBox></td>
-						 </tr>
-						 	
-						  
-						 	
-						  <tr>
-                <td >
-                   预算说明：</td>
+            </tr>
+            <tr>
+                <td>预算说明：</td>
                 <td>
-                      <asp:TextBox ID="sm" runat="server" Width="116px"></asp:TextBox></td>
-						 </tr>
-   <tr>
-                <td >
-                    审批意见：</td>
+                    <asp:TextBox ID="sm" runat="server" Width="116px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>审批意见：</td>
                 <td>
-                    <textarea name="yijian" rows="10" style="width: 357px" id="yijian" runat="server"></textarea></td>
-						 </tr><br />
-	 <tr bgcolor="#ffffff">
-                <td >
-                  是否通过：</td>
-                <td > <asp:DropDownList ID="sf" runat="server">
-                         <asp:ListItem>通过</asp:ListItem>
-                    <asp:ListItem>不通过</asp:ListItem>
-                    </asp:DropDownList>
-					  
-                    </td>
-              </tr>
-			  
-			  <tr>
-                <td >
-                 <asp:Button ID="Button1" runat="server" Text="审批"  OnClick="Button1_Click" />
-                 
-                   
+                    <textarea name="yijian" rows="10" style="width: 357px" id="yijian" runat="server" cols="5"></textarea>
+
                 </td>
-              </tr>
-            </tabel>
+            </tr>
+            <tr>
+                <td>是否通过：</td>
+                <td>
+                    <asp:DropDownList ID="sf" runat="server">
+                        <asp:ListItem>通过</asp:ListItem>
+                        <asp:ListItem>不通过</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Text="审批" OnClick="Button1_Click" />
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

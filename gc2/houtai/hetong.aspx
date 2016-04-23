@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>无标题页</title>
-    <link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
+    <link href="../css/css.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
@@ -19,7 +19,7 @@
                 </tr>
             </table>
             <br />
-            
+
             <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                 DataKeyField="ID" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged" OnItemDataBound="DataGrid1_OnItemDataBound"
                 Width="800px" CellPadding="3" PageSize="20" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
@@ -162,9 +162,6 @@
             </asp:DataGrid><br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="删除所选" />
         </div>--%>
-
-
-
     </form>
 </body>
 </html>

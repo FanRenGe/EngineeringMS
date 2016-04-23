@@ -28,7 +28,7 @@ public partial class Info_addkehu : System.Web.UI.Page
                 this.Button1.Visible = false;
                 this.Button3.Visible = true;
                
-                this.Label2.Text = "修改信息";
+                this.Label2.Text = "修改客户信息";
                 int Employeeid=Convert.ToInt32(Request["Employeeid"].ToString());
                 SqlConnection con1 = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
                 con1.Open();
@@ -61,7 +61,7 @@ public partial class Info_addkehu : System.Web.UI.Page
                 this.MyPanel.Visible=true;
                 this.Button1.Visible=true;
                 this.Button3.Visible=false;
-                this.Label2.Text = "添加";
+                this.Label2.Text = "添加客户信息";
               
             }
          

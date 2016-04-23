@@ -5,37 +5,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>无标题页</title>
-    <link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
+    <link href="../css/css.css" rel="stylesheet" />
 </head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table border="0" cellpadding="0" cellspacing="0" bordercolor="#111111" width="100%">
 
-<form id="form1" runat="server">
-    <div>
-        <span style="font-size: 14px">项目日志<br />
-        </span>
-        <table style="width: 564px; height: 572px;" border="0">
-            <tr>
-                <td style="width: 85px">项目资料名：</td>
-                <td style="width: 155px">
-                    <asp:dropdownlist id="CompanyId1" runat="server">                    </asp:dropdownlist>
-                </td>
-            </tr>
+                <tr height="30">
 
-            <tr>
-                <td style="width: 85px">项目日志：</td>
-                <td style="width: 155px">
-                    <asp:textbox id="rizhi" runat="server" textmode="MultiLine" height="300px" width="325px"></asp:textbox>
-                </td>
-            </tr>
+                    <td background="../Images/topbg.jpg" width="100%" style="height: 30px">
+                        <img height="16" src="../Images/leader_12.jpg"><b>
+                            <asp:Label ID="Label2" runat="server" Text="项目日志"></asp:Label>
+                        </b></td>
+                    <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
+                </tr>
+            </table>
+            <br />
+            <table style="width: 564px; height: 400px;" border="0">
+                <tr>
+                    <td style="width: 85px">项目资料名：</td>
+                    <td style="width: 155px">
+                        <asp:DropDownList runat="server" ID="CompanyId1" />
+                    </td>
+                </tr>
 
-            <tr>
-                <td style="width: 85px"></td>
-                <td style="width: 155px">
-                    <asp:button id="Button2" runat="server" onclick="Button2_Click" text="添加" />
-                    <asp:button id="Button3" runat="server" onclick="Button3_Click" text="返回" />
-                </td>
-            </tr>
-        </table>
-    </div>
-</form>
+                <tr>
+                    <td style="width: 85px">项目日志：</td>
+                    <td style="width: 155px">
+                        <asp:TextBox ID="rizhi" runat="server" TextMode="MultiLine" Height="300px" Width="325px"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 85px"></td>
+                    <td style="width: 155px">
+                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="添加" />
+                        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="返回" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
 </body>
 </html>

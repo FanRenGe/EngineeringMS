@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>无标题页</title>
-    <link href="Admin_STYLE.css" rel="stylesheet" type="text/css">
+    <link href="../css/css.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>

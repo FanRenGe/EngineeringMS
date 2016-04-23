@@ -73,14 +73,14 @@
                                             <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiao.aspx" target="mainFrame">&nbsp;·预算申请</a>·</td>
                                         </tr>
                                         <tr>
-                                            <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiao.aspx" target="mainFrame">&nbsp;·预算申请查询</a>·</td>
+                                            <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiaodetail.aspx" target="mainFrame">&nbsp;·预算申请查询</a>·</td>
                                         </tr>
 
                                         <tr>
                                             <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiao1.aspx" target="mainFrame">&nbsp;·报销申请</a>·</td>
                                         </tr>
                                         <tr>
-                                            <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiao1.aspx" target="mainFrame">&nbsp;·报销申请查询</a>·</td>
+                                            <td height="25" align="center" bgcolor="#FFFFFF"><a href="houtai/tijiaodetail1.aspx" target="mainFrame">&nbsp;·报销申请查询</a>·</td>
                                         </tr>
 
                                     </table>

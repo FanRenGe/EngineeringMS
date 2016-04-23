@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>无标题页</title>
-    <link href="../css.css" rel="stylesheet" type="text/css" />
+    <link href="../css/css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,14 +16,15 @@
 
                 <tr height="30">
                     <td width="3%" background="../Images/topbg.jpg" align="left" style="height: 30px">
-                        <img height="16" src="../Images/leader_12.jpg"><b>列表</b>					</td>
+                        <img height="16" src="../Images/leader_12.jpg"><b>客户管理</b>					</td>
 
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></td>
                 </tr>
-
+            </table>
+            <table>
                 <tr>
                     <td>
                         <asp:GridView ID="GridView1" runat="server" Height="71px" Width="798px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" DataKeyNames="Employeeid" OnRowDataBound="GridView1_RowDataBound1" OnRowDeleting="GridView1_RowDeleting1" OnRowEditing="GridView1_RowEditing">

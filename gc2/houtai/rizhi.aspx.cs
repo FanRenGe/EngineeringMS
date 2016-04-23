@@ -64,7 +64,16 @@ public partial class admin_rizhi : System.Web.UI.Page
         }
         if (e.CommandName == "Delete")
         {
-            Response.Redirect("editrizhi.aspx?id=" + DataGrid1.DataKeys[e.Item.ItemIndex]);
+            int id = Convert.ToInt32(DataGrid1.DataKeys[e.Item.ItemIndex]);
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Connection"]);
+            con.Open();
+            string sql = "delete from rizhi where id=" + id;
+            SqlCommand com = new SqlCommand(sql, con);
+            com.ExecuteNonQuery();
+            Response.Write("<script>alert('删除成功！')</script>");
+            bind();
+            con.Close();
         }
     }
     protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)

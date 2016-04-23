@@ -18,13 +18,13 @@
 
                 <tr height="30">
 
-                    <td background="../Images/topbg.jpg" width="80" style="height: 30px">
+                    <td background="../Images/topbg.jpg" width="100%" style="height: 30px">
                         <img height="16" src="../Images/leader_12.jpg"><b>
                             <asp:Label ID="Label2" runat="server" Text="添加客户新"></asp:Label></b></td>
                     <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
                 </tr>
             </table>
-            <table align="left" style="width: 560px; height: 513px">
+            <table align="left" style="width: 560px; height: 400px">
 
                 <asp:Panel ID="MyPanel" runat="server" Visible="true">
 

@@ -6,13 +6,21 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="../css/css.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <br />
-            <span style="font-size: 14px">合同信息<br />
-            </span>
+            <table border="0" cellpadding="0" cellspacing="0" bordercolor="#111111" width="100%">
+
+                <tr height="30">
+
+                    <td background="../Images/topbg.jpg" width="100%" style="height: 30px">
+                        <img height="16" src="../Images/leader_12.jpg"><b>
+                            <asp:Label ID="Label2" runat="server" Text="查看合同信息"></asp:Label></b></td>
+                    <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
+                </tr>
+            </table>
             <br />
             <table style="width: 564px; height: 572px;" border="0">
                 <tr>
