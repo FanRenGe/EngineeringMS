@@ -194,6 +194,7 @@
                                 <li><a href="houtai/b2.aspx" target="main">报销导出</a></li>
                                 <li><a href="houtai/addshouru.aspx" target="main">添加收入</a></li>
                                 <li><a href="houtai/shouru.aspx" target="main">收入管理</a></li>
+                                <li><a href="houtai/shouzhi.aspx" target="main">收支查询</a></li>
                             </ul>
                         </div>
                         <%} %>
