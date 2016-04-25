@@ -132,7 +132,7 @@ public partial class admin_zl : System.Web.UI.Page
 
     protected void DataGrid1_OnItemDataBound(object sender, DataGridItemEventArgs e)
     {
-        e.Item.Cells[10].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
+        e.Item.Cells[9].Attributes.Add("onclick", "return   confirm('您真的要删除此行吗？');");
 
     }
 }

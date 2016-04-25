@@ -17,7 +17,7 @@ public partial class houtai_shouzhi : System.Web.UI.Page
     protected void btnSearch_Click(object sender, EventArgs e)
     {
         string conn = ConfigurationManager.AppSettings["Connection"];
-        string sql = "select (select SUM(fei)  from shouru where 1=1) as shouru, (select SUM(fei)  from ( select (fei) from bao  where 1=1 union select (fei) from yusuan where 1=1 )a ) as zhichu";
+        string sql = "select (select SUM(fei)  from shouru where 1=1 {0}) as shouru, (select SUM(fei)  from ( select (fei) from bao  where 1=1 {0} union select (fei) from yusuan where 1=1 {0} )a ) as zhichu";
 
 
         string filer = string.Empty;

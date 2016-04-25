@@ -67,12 +67,6 @@
                         </ItemTemplate>
                     </asp:TemplateColumn>
 
-                    <asp:TemplateColumn HeaderText="是否审核">
-                        <ItemTemplate>
-                            <asp:HyperLink ID="HyperLink3" runat="server" Font-Underline="False" Target="_blank"
-                                Text='<%# Eval("shenhe") %>'></asp:HyperLink>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
                     <asp:ButtonColumn CommandName="Detail" Text="查看" HeaderText="查看"></asp:ButtonColumn>
                     <asp:ButtonColumn CommandName="Select" Text="编辑" HeaderText="编辑"></asp:ButtonColumn>
                     <asp:ButtonColumn CommandName="Delete" Text="删除" HeaderText="删除"></asp:ButtonColumn>
