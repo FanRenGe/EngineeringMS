@@ -32,7 +32,7 @@
                     <asp:BoundColumn HeaderText="提交人" DataField="username" />
                     <asp:BoundColumn HeaderText="预算说明" DataField="sm" />
                     <asp:BoundColumn HeaderText="是否通过" DataField="sf" />
-
+                    <asp:BoundColumn HeaderText="审批意见" DataField="yijian" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
