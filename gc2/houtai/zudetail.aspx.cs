@@ -29,7 +29,7 @@ public partial class houtai_zudetail : System.Web.UI.Page
                     ming.Text = dr1["ming"].ToString();
                     shu.Text = dr1["shu"].ToString();
                     zuzhang.Text = dr1["zuzhang"].ToString();
-
+                    xiangmu.Text = dr1["xiangmu"].ToString();
 
 
                 }

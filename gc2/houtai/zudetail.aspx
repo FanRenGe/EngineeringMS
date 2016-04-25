@@ -21,7 +21,7 @@
                     <td background="../Images/topbg.jpg" align="right" style="height: 30px"></td>
                 </tr>
             </table>
-            <table align="center" style="width: 560px; height: 513px">
+            <table align="left" style="width: 560px; height: 513px">
 
                 <asp:Panel ID="MyPanel" runat="server" Visible="true">
 
@@ -42,6 +42,11 @@
                         <td width="100">小组组长：</td>
                         <td>
                             <asp:TextBox ID="zuzhang" runat="server" Enabled="False"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td width="100">负责项目：</td>
+                        <td>
+                            <asp:TextBox ID="xiangmu" runat="server" Enabled="False"></asp:TextBox></td>
                     </tr>
                 </asp:Panel>
 

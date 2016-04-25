@@ -46,12 +46,12 @@
                         <td>
                             <asp:TextBox ID="zuzhang" runat="server"></asp:TextBox></td>
                     </tr>
+                    <tr>
+                        <td width="100">负责项目：</td>
+                        <td>
+                            <asp:TextBox ID="xiangmu" runat="server"></asp:TextBox></td>
+                    </tr>
                 </asp:Panel>
-
-
-
-
-
 
                 <tr>
                     <td align="center" colspan="2">

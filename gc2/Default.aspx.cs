@@ -69,8 +69,9 @@ public partial class admin_Default : System.Web.UI.Page
                     dr2.Close();
                     con.Close();
                     Session["UserName"] = name;
+                    Session["UserType"] = "yg";
                     Response.Cookies["user"].Value = TextBox1.Text.Trim();
-                    Response.Redirect("HTMLPage3.htm");
+                    Response.Redirect("Index.aspx");
 
                 }
 
@@ -90,8 +91,9 @@ public partial class admin_Default : System.Web.UI.Page
                     dr3.Close();
                     con.Close();
                     Session["UserName"] = name;
+                    Session["UserType"] = "user";
                     Response.Cookies["user"].Value = TextBox1.Text.Trim();
-                    Response.Redirect("HTMLPage2.htm");
+                    Response.Redirect("Index.aspx");
 
                 }
 
