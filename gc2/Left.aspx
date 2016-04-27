@@ -180,7 +180,7 @@
                                 <li><a href="houtai/edithetong.aspx" target="main">添加合同信息</a></li>
                                 <li><a href="houtai/hetong.aspx" target="main">合同信息</a></li>
                                 <li><a href="houtai/b3.aspx" target="main">合同信息导出</a></li>
-
+                                 <li><a href="houtai/hetongchaxun.aspx" target="main">合同查询</a></li>
 
                             </ul>
                         </div>
